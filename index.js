@@ -1,6 +1,7 @@
 const express = require("express")
 const app = express()
-const PORT = 3000
+//console.log(process)
+const PORT = process.env.PORT || 3000 //this means we will run on whatever port they give us, if not, 3000 as background
 const router = require("./routes/taskRoutes.js")
 const cors = require("cors");
 // boilerplate - allow us to access req.body for post and update
